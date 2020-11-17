@@ -1,0 +1,124 @@
+/*CSS variables*/
+:root
+{
+    --primery-color: #4458dc;
+    --primery-color2: #854fee;
+    --primery-color3:  #131413;
+    --text-color:   #fff;
+    --border-color:   #201f1f17;
+    --gradient-color:linear-gradient(90deg,#4458dc 0%,#854fee 100%);
+    --shadow-color: 0px,10px,30px rgba(118,85,225,0.3);
+    --shadow-color: 0px,10px,30px rgba(57,56,61,0.205);
+
+/*font-family varible*/
+--roboto:"ROBOTO",cursive;
+}
+
+
+/* the timeline*/
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: cursive;
+    background: var(--primery-color);
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+p
+{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: .7;
+}
+.timeline
+{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+}
+.timeline
+.timeline-body
+{
+    position: relative;
+    background:var(--primery-color2);
+    margin-left: 100px;
+    border-radius: 0 8px 8px 0;
+    padding: 5px 0;
+}
+    
+    /*le trait vertical*/
+    
+    
+.timeline
+.timeline-body::after
+{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: var(--primery-color3);
+    left: -4px;
+    top: 0px;
+}
+.timeline
+.timeline-body 
+.timeline-items
+{
+    position: relative;
+}
+    
+    /*le rond*/
+.timeline
+.timeline-body 
+.timeline-items::after
+{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid var(--primery-color3);
+    background: var(--text-color);
+    position: absolute;
+    left: -16px;
+    top: 0px;
+    z-index: 9;
+}
+.timeline
+.timeline-body 
+.timeline-items
+.time
+{
+    position: absolute;
+    left: -100px;
+    top: 4px;
+    opacity: .5;
+    font-size: 13px;
+}
+.timeline
+.timeline-body 
+.timeline-items
+.content
+{
+    margin: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px dashed darkblue;
+
+
+}
+.timeline
+.timeline-body 
+.timeline-items
+.content
+.title
+{
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
